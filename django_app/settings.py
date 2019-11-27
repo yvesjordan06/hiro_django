@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Local Apps
     'polls.apps.PollsConfig',
-    'btpp.apps.BtppConfig'
+    'btpp.apps.BtppConfig',
 ]
 
 MIDDLEWARE = [
