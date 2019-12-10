@@ -10,7 +10,8 @@ class UserAdmin(admin.ModelAdmin):
 
 
 class AnnonceAdmin(admin.ModelAdmin):
-    list_display = ('user', 'intitule', 'description', 'nombres_de_taches', 'taxation', 'est_visible', 'est_complete', 'lieu')
+    list_display = (
+    'user', 'intitule', 'description', 'nombres_de_taches', 'taxation', 'est_visible', 'est_complete', 'lieu')
     list_filter = ['date_post', 'user']
     search_fields = ['intitule', 'description', 'lieu']
 
@@ -30,8 +31,14 @@ class TacheAdmin(admin.ModelAdmin):
     search_fields = ['intitule', 'description']
 
 
+class AbonnementAdmin(admin.ModelAdmin):
+    list_display = ('intitule', 'prix', 'type')
+    list_filter = ['prix']
+
+
 admin.site.register(Metier, MetierAdmin)
 admin.site.register(Tache, TacheAdmin)
 admin.site.register(Taxation, TaxationAdmin)
 admin.site.register(Annonce, AnnonceAdmin)
 admin.site.register(User, UserAdmin)
+admin.site.register(Abonnement, AbonnementAdmin)

@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     # Rest App
     'rest_framework',
     'rest_framework.authtoken',
-    'djoser',
+    # 'djoser',
     # Django's App
     'django.contrib.admin',
     'django.contrib.auth',

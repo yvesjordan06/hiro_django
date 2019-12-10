@@ -31,7 +31,7 @@ class Tache(models.Model):
 
 class Metier(models.Model):
     intitule = models.CharField(max_length=200)
-    description = models.CharField(max_length=500)
+    description = models.TextField(max_length=500)
     taches = models.ManyToManyField(Tache)
 
     def __str__(self):
@@ -44,8 +44,7 @@ class Metier(models.Model):
 class Abonnement(models.Model):
     intitule = models.CharField(max_length=50)
     type = models.CharField(max_length=20)
-    prix = models.CharField(max_length=20)
-    taches = models.ManyToManyField(Tache)
+    prix = models.BigIntegerField(default=0)
 
     def __str__(self):
         return self.intitule
